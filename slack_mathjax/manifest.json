@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "SlackMathJax",
+	"version": "0.1",
+	"description": "The first extension that I made.",
+	"background": {
+		"scripts": ["bg.js"],
+		"persistent": false
+	},
+	"browser_action": {
+		"default_icon": "i.png"
+	},
+	"permissions": [
+		"activeTab",
+		"tabs"
+	],
+	"content_scripts": [ {
+		"matches": ["https://example.slack.com/*"],
+		"js": ["content.js"]
+	}]
+}
